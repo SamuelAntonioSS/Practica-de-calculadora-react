@@ -34,7 +34,7 @@
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
-    background-color: #007bff;
+    background-color: #1900ff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -42,7 +42,7 @@
 }
 
 .calculadora button:hover {
-    background-color: #0056b3;
+    background-color: #b3a100;
 }
 
 .calculadora p {

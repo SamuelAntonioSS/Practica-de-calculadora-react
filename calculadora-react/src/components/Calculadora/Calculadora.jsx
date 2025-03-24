@@ -53,10 +53,15 @@ const Calculadora = () => {
                 onChange={(e) => setNum2(e.target.value)}
             />
             <button onClick={handleSumar}>Sumar</button>
+            <br/>
             <button onClick={handleRestar}>Restar</button>
+            <br/>
             <button onClick={handleMultiplicar}>Multiplicar</button>
+            <br/>
             <button onClick={handleDividir}>Dividir</button>
+            <br/>
             <button onClick={handleLimpiar}>Limpiar</button>
+            <br/>
 
             {resultado !== null && <p>Resultado: {resultado}</p>}
         </div>

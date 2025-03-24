@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import "./Todo.css";
-
-// Todo.jsx
+import "./Todo.css"; // Asegúrate de importar el archivo CSS
 
 const Todo = () => {
     // Estado para manejar la lista de tareas
@@ -16,7 +14,17 @@ const Todo = () => {
         setTask(""); // Limpiar el input
     };
 
+    // Función para eliminar una tarea
+    const deleteTodo = (id) => {
+        setTodos(todos.filter(todo => todo.id !== id));
+    };
 
+    // Función para marcar una tarea como completada
+    const toggleComplete = (id) => {
+        setTodos(todos.map(todo =>
+            todo.id === id ? { ...todo, completed: !todo.completed } : todo
+        ));
+    };
 
     return (
         <div className="todo-container">
@@ -34,6 +42,7 @@ const Todo = () => {
                 {todos.map((todo) => (
                     <li key={todo.id} className={todo.completed ? "completed" : ""}>
                         <span onClick={() => toggleComplete(todo.id)}>{todo.text}</span>
+                        <button className="delete-btn" onClick={() => deleteTodo(todo.id)}>X</button>
                     </li>
                 ))}
             </ul>
@@ -42,4 +51,3 @@ const Todo = () => {
 };
 
 export default Todo;
-
