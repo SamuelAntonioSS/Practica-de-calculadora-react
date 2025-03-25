@@ -1,0 +1,62 @@
+/* Estilo del contenedor del popup */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Estilo del contenido del popup */
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  animation: popup-animation 2s ease-out;
+  position: relative;
+}
+
+/* Estilo del título dentro del popup */
+.popup-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Estilo para la X (botón de cierre) */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: red;
+}
+
+@keyframes popup-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
